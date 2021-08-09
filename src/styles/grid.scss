@@ -1,24 +1,67 @@
 body, #root {
     background-color: #282a36;
+    font-family: 'Lato', sans-serif;
+}
+
+.toggle-editor-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background-color: #44475a;
+    border: none;
+    color: #FFF;
+    padding: .3rem .5rem;
+    z-index:99999;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken(#44475a, 5)
+    }
 }
 
 .grid-container {
     background-color: #44475a;
+    overflow: hidden;
 }
 
-.bookmark-container {
-    padding: 1rem .7rem;
+.grid-cell {
+    padding: 0.7rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+
 
     .header-container {
-        .label-input {
-            font-size: 16px;
-            background-color: rgba(0,0,0,0);
-            border: none;
-            outline: none;
-            color: #b7b7ce;
+        color: #FFF;
+    }
+
+    .items-container {
+        margin-top: .5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            display: flex;
+            align-items: center;
+            background-color: #44475a;
+            color: #FFF;
+            padding: .4rem .7rem;
+            width: 13rem;
+            margin: 0 .5rem .5rem 0;
+            cursor: pointer;
+
+            img {
+                $size: 15px;
+                width: $size;
+                height: $size;
+
+                margin-right: .5rem;
+            }
+
+            &:hover {
+                background-color: darken(#44475a, 5);
+            }
         }
-
-
     }
 
 }

@@ -1,19 +1,20 @@
 {
   "name": "gridmark",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html --public-url /dist",
+    "clean": "rm -r .parcel-cache dist"
   },
   "dependencies": {
     "react": "^17.0.2",
+    "react-ace": "^9.4.3",
     "react-dom": "^17.0.2",
     "react-grid-layout": "^1.2.4"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
     "parcel": "^2.0.0-beta.2"
   }
 }
